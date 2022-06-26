@@ -10,23 +10,23 @@ class TagDashboard < Administrate::BaseDashboard
   }.freeze
 
   COLLECTION_ATTRIBUTES = %i[
-    post
     id
     name
+    post
     created_at
   ].freeze
 
   SHOW_PAGE_ATTRIBUTES = %i[
-    post
     id
     name
+    post
     created_at
     updated_at
   ].freeze
 
   FORM_ATTRIBUTES = %i[
-    post
     name
+    post
   ].freeze
 
   COLLECTION_FILTERS = {}.freeze
