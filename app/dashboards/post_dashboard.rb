@@ -34,7 +34,7 @@ class PostDashboard < Administrate::BaseDashboard
 
   COLLECTION_FILTERS = {}.freeze
 
-  # def display_resource(post)
-  #   "Post ##{post.id}"
-  # end
+  def display_resource(post)
+    "Post ##{post.id} #{post.title}"
+  end
 end
