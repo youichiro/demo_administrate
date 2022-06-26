@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_06_26_030909) do
+ActiveRecord::Schema[7.0].define(version: 2022_06_26_035551) do
   create_table "posts", force: :cascade do |t|
     t.string "title"
     t.text "body"
@@ -19,4 +19,13 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_26_030909) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "tags", force: :cascade do |t|
+    t.integer "post_id", null: false
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["post_id"], name: "index_tags_on_post_id"
+  end
+
+  add_foreign_key "tags", "posts"
 end
