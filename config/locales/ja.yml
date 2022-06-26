@@ -2,10 +2,14 @@ ja:
   activerecord:
     models:
       post: 投稿
+      tag: タグ
     attributes:
+      created_at: 作成日時
+      updated_at: 更新日時
       post:
         title: タイトル
         body: 本文
         published: 公開
-        created_at: 作成日時
-        updated_at: 更新日時
+      tag:
+        name: タグ名
+        post_id: 投稿
